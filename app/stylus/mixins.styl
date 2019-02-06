@@ -1,0 +1,61 @@
+font-url(file)
+  return '../fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = normal)
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'), 
+        url(font-url(file + '.ttf')) format('truetype')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')
+
+trs(element = all, duration = .2s, timeFunc = ease)
+  transition element duration timeFunc
+
+rem($value)
+  return unit($value / 16,'rem')
+  
+
+// media 
+width-lg()
+  @media (max-width 1200px)
+    {block}
+    
+width-md()
+  @media (max-width 992px)
+    {block}
+    
+width-sm()
+  @media (max-width 768px)
+    {block}
+    
+width-xs()
+  @media (max-width 540px)
+    {block}
+    
+max(bp)
+  @media (max-width bp)
+    {block}    
+    
+min(bp)
+  @media (min-width bp)
+    {block}
+
+
+// placeholder
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}

@@ -1,0 +1,190 @@
+html
+  font-size 10px
+  
+html,
+body 
+  height 100%
+
+body 
+  font 400 1.6rem/1 font-main
+  color grey
+  background-color white
+  overflow-x hidden
+  min-width 320px
+
+* 
+  box-sizing border-box
+  vertical-align top 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+  margin 0
+
+ul 
+  padding 0
+  margin 0
+
+li 
+  list-style none
+
+p 
+  margin 0
+
+
+a 
+  text-decoration none
+  color inherit
+
+a:focus,
+button:focus,
+img:focus 
+  outline none
+
+img 
+  max-width 100%
+  height auto 
+
+.input 
+  display inline-block
+  height 45px
+  padding 0 25px
+  border-radius 22px
+  border 2px solid orange
+  font-style italic
+  font-size 1.5rem
+  line-height 4.5rem
+  white-space: nowrap 
+  overflow: hidden 
+  text-overflow: ellipsis 
+  color #707070
+  trs()
+
+
+  
+.textarea 
+  height 145px
+  display inline-block
+  border-radius 15px
+  border 2px solid orange
+  padding 25px
+  font-size 1.5rem
+
+
+input:focus, 
+textarea:focus, 
+select:focus 
+  outline: none 
+
+input[type="text"]:focus::-webkit-input-placeholder  
+	color transparent 
+input[type="text"]:focus::-moz-placeholder           
+	color transparent 
+input[type="text"]:focus:-moz-placeholder            
+	color transparent 
+input[type="text"]:focus:-ms-input-placeholder       
+	color transparent 
+
+input[type="email"]:focus::-webkit-input-placeholder  
+	color transparent 
+input[type="email"]:focus::-moz-placeholder           
+	color transparent 
+input[type="email"]:focus:-moz-placeholder            
+	color transparent 
+input[type="email"]:focus:-ms-input-placeholder       
+	color transparent 
+
+textarea:focus::-webkit-input-placeholder            
+	color transparent 
+textarea:focus::-moz-placeholder                     
+	color transparent 
+textarea:focus:-moz-placeholder                      
+	color transparent 
+textarea:focus:-ms-input-placeholder                 
+	color transparent 
+
+.checkbox
+  
+  &+&
+    margin-top 20px
+    
+  input
+    position absolute
+    z-index -1
+    opacity 0
+    
+    & + label 
+      width cacl(100% - 35px)
+      position relative
+      left 35px
+      font-size 1.5rem
+      line-height 1.5em
+      word-wrap break-word
+       
+      
+      &:hover
+        cursor pointer
+        
+      &::before 
+        content '\2714'
+        position absolute
+        top 0
+        left -35px
+        width 20px
+        height 20px
+        border-radius 2px
+        border 1px solid #b8b8b8
+        text-align center
+        line-height 2rem
+        color transparent
+          
+  &:checked + label::before
+    color orange
+
+
+.radio
+  
+  &+&
+    margin-top 20px
+    
+  input
+    position absolute
+    z-index -1
+    opacity 0
+    
+    & + label 
+      position relative
+      left 35px
+      font-size 1.5rem
+      line-height 1.5em
+      word-wrap break-word
+      
+      &:hover
+        cursor pointer
+        
+      &::before 
+        content ''
+        position absolute
+        top 0
+        left -35px
+        width 20px
+        height 20px
+        border-radius 50%
+        border 1px solid #b8b8b8
+        
+      &::after
+        content ''
+        position absolute
+        top 6px
+        left -29px
+        width 10px
+        height 10px
+        border-radius 50%
+        background-color orange
+        opacity 0
+          
+  &:checked + label::after
+    opacity 1
