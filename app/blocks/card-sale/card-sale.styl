@@ -1,0 +1,50 @@
+.card-sale
+	width 100%
+	max-width 370px
+	trs(all, .3s)
+	
+	&__banner
+		position relative
+		height 380px
+		
+		&::after
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%	
+			content ''
+			background-image linear-gradient(to top, rgba(20, 19, 25, 0.56) 0%, rgba(20, 19, 25, 0.38) 100%)
+			trs(opacity, .4s)
+			
+	&__info
+		padding 24px 24px 30px 25px
+		color black
+	
+	&__title
+		margin-bottom 11px
+		font 400 3.1rem/1.2em font-second
+		letter-spacing .31px
+	
+	&__descr
+		margin-bottom 17px
+		font-weight 300
+		line-height 2.2rem
+	
+	&__wrap
+		display flex
+		justify-content space-between
+		align-items center
+	
+	&__price
+		font 400 2.5rem/1 font-second
+		
+		span 
+			font-size 1.8rem
+			
+	&:hover
+		transform translate(-2px, -2px)
+		box-shadow 2px 2px 20px rgba(0, 0, 0, .1)
+		
+		.card-sale__banner::after
+			opacity 0
