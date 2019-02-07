@@ -1,0 +1,62 @@
+.card-product
+	position relative
+	width 100%
+	max-width 390px
+	border 1px solid #ddd
+	trs(all, .3s)
+	
+	&:hover
+		transform translate(-2px, -2px)
+		box-shadow 2px 2px 20px rgba(0, 0, 0, .1)
+		
+	
+	&__sale
+		position absolute
+		top 45px
+		left 0
+		display flex
+		flex-direction column
+		align-items flex-start
+	
+	&__label
+		min-height 40px
+		padding 7px 11px
+		font-size 1.3rem
+		line-height 1.1em
+		color white
+		
+		&+&
+			margin-top 4px
+		
+		&--big 
+			font-size 2.4rem
+			
+		&--green
+			background-color green
+			
+		&--violet
+			background-color violet
+	
+	&__banner
+		height 294px
+		padding-top 44px
+		text-align center
+	
+	&__info
+		padding 30px 24px 24px
+		
+	&__title
+		margin-bottom 7px
+		font 400 2.4rem/1 font-second
+		letter-spacing .24px
+	
+	&__descr
+		margin-bottom 12px
+		line-height 1.3em
+		
+	&__wrap
+		display flex
+		justify-content space-between
+	
+	&__price
+		font 400 3.6rem/1.1em font-second
