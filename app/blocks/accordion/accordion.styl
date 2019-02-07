@@ -1,0 +1,58 @@
+.accordion
+	padding 0 25px
+	background-color white
+
+	&__item
+		padding-top 28px
+		padding-bottom 21px
+		
+		&:not(:last-child)
+			border-bottom 1px solid #e8e8e8
+
+		&:last-child .accordion__body
+			display block
+
+	&__header
+		display flex
+		justify-content space-between
+		align-items flex-start
+		trs()
+
+		&:hover
+			opacity .6
+
+	&__title
+		width calc(100% - 30px)
+		font-size 2rem
+		font-weight 600
+		line-height 2.2rem
+
+		&:hover
+			cursor pointer		
+
+	&__icon
+		width 23px
+		height 13px
+		fill #9e9da2
+		transform rotate(-90deg)
+		trs()
+
+		&:hover
+			cursor pointer
+
+		&--open
+			transform rotate(90deg)
+
+	&__body
+		display none
+		padding-top 20px
+		
+		p 
+			line-height 2.2rem
+			
+
+	+width-sm()
+		padding 0 20px
+		
+		&__title
+			font-size 1.8rem
