@@ -1,0 +1,43 @@
+.btn
+	position relative
+	z-index 1
+	display inline-flex
+	justify-content center
+	align-items center
+	min-width 170px
+	height 45px
+	padding 0 5px
+	border 2px solid violet-light
+	border-radius 20px
+	font-weight 600
+	overflow hidden
+	color black
+	background-color transparent
+	trs(all, .3s)
+	
+	&::before
+		position absolute
+		top 0
+		left 50%
+		right 50%
+		bottom 0
+		z-index -1
+		opacity 0
+		content ''
+		background-color violet-light
+		trs(all, .4s, ease)
+	
+	&:hover
+		color white
+		letter-spacing .8px
+		cursor pointer
+
+		&::before
+			left 0
+			right 0
+			opacity 1
+			trs(all, .4s, ease)
+		
+	&--dark
+		color white
+		
