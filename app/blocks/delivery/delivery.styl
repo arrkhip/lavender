@@ -1,0 +1,111 @@
+.delivery
+	max-width 770px
+	padding 35px 25px 30px
+	border 1px solid rgba(255, 255, 255, .5)
+	color white
+	
+	&__title
+		font-size 2.4rem
+		font-weight 600
+		
+		& + .delivery__descr
+			margin-top 14px
+			
+	&__subtitle
+		font-size 1.4rem
+		color rgba(255, 255, 255, .5)
+	
+	&__descr
+		font-size 15px
+		line-height 2.2rem
+
+		&--light
+			font-weight 300
+
+	&__self
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items flex-start
+		padding-bottom 28px
+		margin-bottom 28px
+		border-bottom 1px solid rgba(0, 0, 0, .25)
+		
+		&-sale
+			margin-bottom 12px
+			font-size 2rem
+			font-stile italic
+			
+	&__list
+		padding-top 25px
+		
+	&__row
+		display flex
+		justify-content space-between
+		align-items flex-end
+		
+		&:not(:last-child)
+			position relative
+			padding-bottom 15px
+			margin-bottom 20px
+			
+			&::after
+				content ''
+				position absolute
+				top 100%
+				right 0
+				width calc(100% - 42px)
+				height 1px
+				background-color rgba(0, 0, 0, .25)
+
+	&__zone
+		display flex
+		align-items flex-start
+		width 100%
+		max-width 340px
+
+		&-icon
+			width 24px
+			height 31px
+			fill rgba(255, 255, 255, .25)
+
+		&-info
+			width calc(100% - 24px)
+			padding-left 15px
+
+		&-adds
+			font-size 1.9rem
+			line-height 2.2rem
+			font-weight 300
+
+	&__price
+		font-size 1.8rem
+		line-height 2.2rem
+		font-weight 600
+
+	&__info
+
+		&-text
+			font-size 1.8rem
+			line-height 2.2rem
+			font-weight 600
+			
+
+	+width-sm()
+			
+		&__zone
+			max-width 40%
+			
+
+	+width-xs()
+		
+		&__row 
+			flex-wrap wrap
+			align-items center
+			
+		&__zone
+			max-width 100%
+			margin-bottom 18px
+			
+		&__price 
+			padding-left 39px
