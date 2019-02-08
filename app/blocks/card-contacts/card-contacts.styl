@@ -1,0 +1,53 @@
+.card-contacts
+	width 570px
+	padding 35px 35px 40px
+	border 1px solid #e8e8e8
+	color black
+	background-color white
+	
+	&__title
+		font 400 3rem/1 font-second
+		letter-spacing .3px
+
+	&__list
+		padding-top 30px
+
+	&__item
+		display flex
+		align-items flex-start
+		
+		&:not(:last-child)
+			padding-bottom 30px
+			
+			.card-contacts__info
+				padding-bottom 28px
+				border-bottom 1px solid #e8e8e8
+		
+
+	&__icon
+		width 31px
+		height 31px
+		margin-right 9px
+		fill violet-light
+
+	&__info
+		width: calc(100% - 40px)
+		
+	&__subtitle
+		margin-bottom 10px
+		letter-spacing .16px
+
+	&__text
+		font-size 2.2rem
+		font-weight 300
+		letter-spacing .22px
+		
+		&--border
+			border-bottom 1px dashed #ccc
+		
+	a&__text
+		trs()
+		
+		&:hover
+			opacity .6
+			
