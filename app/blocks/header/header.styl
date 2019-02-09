@@ -1,7 +1,7 @@
 .header
 	padding-top 35px
-	padding-bottom 15px
-	background-color violet-dark
+	padding-bottom 18px
+	background violet-dark url('../img/header-decor.png') no-repeat center top
 	
 	.grid
 		display flex
@@ -9,45 +9,157 @@
 		align-items flex-start
 
 	&__info
+		display inline-flex
+		align-items flex-start
+		margin-right 30px
 
-	&--location
+		&-icon
+			width 23px
+			height 23px
+			margin-right 10px
+			fill rgba(255, 255, 255 .25)
 
-	&-icon
+		&-title
+			margin-bottom 10px
+			font-weight 600
+			color white
 
-	&-box
-
-	&-title
-
-	&-descr
+		&-descr
+			font-size 1.5rem
+			color violet-light
 
 	&__social
 
-	&-item
+		&-item:not(:last-child)
+				margin-right 17px
+				
+		svg 
+			width: 24px
+			height: 24px
+			fill rgba(255, 255, 255, .7)
 
 	&__logo
-
-	&__info
-
-	&-icon
-
-	&-box
-
-	&-title
-
-	&-descr
+		padding-bottom 28px
+		margin 0 auto
+		font 400 4.4rem/1 font-decor
+		color white
 
 	&__phone
-
-	&-item
+		
+		&-item
+			display block
+			font-size 2rem
+			font-weight 600
+			color white
+			trs()
+			
+			&:not(:last-child)
+				margin-bottom 12px
+				
+			&:hover 
+				opacity .6
 
 	&__nav
+		width calc(100% - 200px)
+		padding-top 23px
+		margin-right auto
+		border-top 1px solid rgba(255, 255, 255, .12)
 
-	&-list
+		&-list
+			display inline-flex
+			justify-content space-between
+			align-items flex-start
+			width 100%
 
-	&-item
+		&-item
 		
-		a
+			a
+				font-size 15px
+				color white
+				trs(color)
+				
+			&--active
+				a 
+					color violet-light
 			
-	.btn
-		// 
+			&:not(.header__nav-item--active) a 
+				trs()
+				
+				&:hover
+					opacity .6
+					
+
+	+width-lg()
+	
+		&__info
+			margin-right 20px
+			
+		&__logo
+			font-size 3.8rem
+			
+
+		+width-md()
+			padding-top 45px
+			padding-bottom 42px
+			
+	
+			
+				
+			.grid
+				position relative
+				justify-content center
+				
+				&::after
+					content ''
+					flex 0 0 100%
+					height 0
+			
+			&__logo
+				order -1
+				width 100%
+				padding-bottom 42px
+				text-align center
+				
+			&__info
+				margin-right 0
+				
+				&--location
+					margin-bottom 35px
+				
+				&--schedule
+					order 1
+					margin-right 20px
+					
+			&__social
+				align-self center
+				order 2
+					
+			&__phone 
+				position relative
+				order 2
+				width 100%
+				padding-top 55px
+				margin-top 44px
+				margin-bottom 41px
+				text-align center
+				
+				&::before
+					content ''
+					position absolute
+					top 0
+					left 0
+					width 100%
+					height 1px
+					background-image  linear-gradient(to right,transparent 0,rgb(54, 51, 68) 50%,transparent 100%)
+				
+			.btn 
+				order 2
+				marign 0 auto
+				
+		
+			&__nav
+				display none
+			
+			
+
 	
