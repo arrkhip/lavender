@@ -26,4 +26,16 @@ var swiper = new Swiper('.promotions__slider', {
 	},
 });
 
+
+// popular slider
+var swiper = new Swiper('.popular__slider', {
+	slidesPerView: 3,
+	spaceBetween: 0,
+	grabCursor: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		hide: false,
+	},
+});
+
 });
