@@ -15,6 +15,7 @@ $(function() {
 });
 
 
+// promotions slider
 var swiper = new Swiper('.promotions__slider', {
 	slidesPerView: 'auto',
 	spaceBetween: 30,
