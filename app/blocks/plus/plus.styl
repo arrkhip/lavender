@@ -1,0 +1,32 @@
+.plus
+	padding-top 42px
+	padding-bottom 48px
+	background url('../img/plus-bg.png') no-repeat center/cover
+
+	&__list
+		display flex
+		flex-wrap wrap
+		align-items flex-start
+		
+	&__item
+		width 25%
+		
+
+	+width-md()
+		
+		&__item
+			width 33%
+			
+
+	+width-sm()
+		
+		&__item
+			width 50%
+			
+
+	+width-xs()
+		background-image url('../img/plus-bg--small.png')
+		
+		&__item
+			width 100%
+	
