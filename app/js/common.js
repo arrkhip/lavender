@@ -15,9 +15,10 @@ $(function() {
 });
 
 
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.promotions__slider', {
 	slidesPerView: 'auto',
 	spaceBetween: 30,
+	grabCursor: true,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
