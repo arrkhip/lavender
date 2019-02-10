@@ -51,6 +51,14 @@ var swiper = new Swiper('.customers__slider', {
 });
 
 
+// reviews slider
+var swiper = new Swiper('.reviews__slider', {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	grabCursor: true,
+});
+
+
 // Yandex map
 // if($("#map").length > 0) {
 //   ymaps.ready(init);
