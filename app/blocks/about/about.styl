@@ -1,2 +1,65 @@
-.about 
- 	 display block
+.about
+	padding-top 48px
+	background-color blue-light
+	
+	&__inner
+		display flex
+		justify-content space-between
+		align-items center
+		padding-bottom 45px
+		border-bottom 1px solid #e8e8e8
+		
+	&__statistics,
+	&__info
+		width 50%
+		
+	&__statistics
+		display flex
+		justify-content space-between
+		align-items center
+		padding-right 70px
+			
+	&__info
+		
+		p 
+			font-size 1.5rem
+			line-height 2.1rem
+			
+			&:not(:last-child)
+				margin-bottom 25px
+				
+
+	+width-lg()
+	
+		&__statistics
+			padding-right 15px
+	
+
+	+width-md()
+	
+		&__inner
+			flex-direction column
+				
+		&__statistics,
+		&__info
+			width 100%
+			
+		&__statistics
+			padding-right 0
+			margin-bottom 50px
+			
+
+	+width-xs()
+	
+		&__statistics
+			flex-direction column
+			
+		.statistics
+			width 100%
+			max-width 240px
+			
+			&:not(:last-child)
+				margin-bottom 65px
+	
+
+		
