@@ -38,4 +38,16 @@ var swiper = new Swiper('.popular__slider', {
 	},
 });
 
+
+// customers slider
+var swiper = new Swiper('.customers__slider', {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	grabCursor: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		hide: false,
+	},
+});
+
 });
