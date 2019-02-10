@@ -50,4 +50,22 @@ var swiper = new Swiper('.customers__slider', {
 	},
 });
 
+
+// Yandex map
+// if($("#map").length > 0) {
+//   ymaps.ready(init);
+//   function init () {
+//     var myMap = new ymaps.Map('map', {
+
+//       center: [54.707686, 55.999780], 
+//       zoom: 16
+//     });
+//     var myPlacemark = new ymaps.Placemark(
+//       [54.707686, 55.999780]        
+//       );
+//     myMap.geoObjects.add(myPlacemark);
+//   }
+// }
+
+
 });

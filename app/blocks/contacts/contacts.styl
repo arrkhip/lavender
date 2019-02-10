@@ -1,0 +1,27 @@
+.contacts
+	padding-bottom 25px
+	background-color blue-light
+	
+	.grid
+		display flex
+		max-width 100%	
+		justify-content space-between
+	
+	&__map
+		width 100%
+		max-width calc(100% - 595px)
+		background url('../img/map.png') no-repeat center/cover
+		
+
+	+width-md()
+		padding-bottom 0
+		
+		.grid
+			flex-direction column
+			
+		&__map
+			max-width 100%
+			margin-top 25px
+			height 478px
+
+		
