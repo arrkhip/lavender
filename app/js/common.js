@@ -129,12 +129,16 @@ if($("#map").length > 0) {
 
 
 // filter
-$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+$('.filter__caption').on('click', '.filter__item:not(.filter__item--active)', function() {
 	$(this)
-	.addClass('active').siblings().removeClass('active')
-	.closest('.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+	.addClass('filter__item--active').siblings().removeClass('filter__item--active')
+	.closest('.filter').find('.filter__content').removeClass('filter__content--active').eq($(this).index()).addClass('filter__content--active');
 });
 
+// filter active category
+$('.filter__category').click(function() {
+  $(this).toggleClass('filter__category--active');
+});
 
 
 });

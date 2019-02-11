@@ -1,9 +1,157 @@
 .filter
-	// 
+	display flex
+	align-items flex-start
+	
+	&__caption
+		
+		&:hover
+			cursor pointer
+		
+	
+	&__item
+		
+		&:not(:last-child)
+			margin-bottom 20px
+	
+		&--active .filter__title
+			opacity 1
+	
+	&__arrow
+		width 18px
+		height 18px
+		opacity .35	
+		transform rotate(90deg)
+	
+		&--down
+			transform rotate(-90deg)
+	
+	&__title
+		display inline-block
+		padding-left 15px
+		font-size 1.8rem
+		font-weight 600
+		opacity .35
+	
+	&__content
+		padding-left 26px
+		opacity .35
+	
+		&--active
+			opacity 1
+			
+			.filter__category
+				trs()
+				pointer-events all
+				
+				&:hover
+					cursor pointer
+	
+	&__list
+		display flex
+		align-items flex-start
+	
+	&__category
+		height 30px
+		padding 6px 14px
+		border 1px solid rgba(40, 38, 49, .25)
+		border-radius 15px
+		font-size 1.5rem
+		pointer-events none
+		
+		&:not(:last-child)
+			margin-bottom 8px
+		
+		&--active
+			color white
+			background-color #9e9da2
+			
+		&:not(:last-child)
+			margin-right 25px
+			
 
+	+width-md()
+		flex-direction column
+		align-items center
+	
+		&__caption
+			display flex
+			align-items flex-start
+			width 100%
+			height 60px
+			max-width 435px
+			margin-bottom 15px
+			border 2px solid violet-light
+			border-radius 30px
+			line-height 5.6rem
+			overflow hidden
+			
+			&:hover
+				cursor pointer
+			
+		
+		&__item
+			height 100%
+			width 50%
+			text-align center
+			
+			&:not(:last-child)
+				margin-bottom 0
+				
+			&--active
+				background-color violet-light
+				color white
+		
+		&__arrow
+			display none
+		
+		&__title
+			padding-left 0
+			font-size 2.2rem
+			font-weight 600
+			opacity 1
+			
+			span 
+				display none
+		
+		&__content
+			display none
+			padding-left 0
+			opacity 1
+		
+			&--active
+				display block
+		
+		&__list
+			display flex
+			flex-wrap wrap
+			align-items flex-start
+			justify-content center
+		
+		&__category
+			height 30px
+			padding 6px 14px
+			margin-top 13px
+			border 1px solid rgba(40, 38, 49, .25)
+			border-radius 15px
+			font-size 1.7rem
+			
+			&--active
+				color white
+				background-color #9e9da2
+			
 
-.tabs__content 
-	display none /* по умолчанию прячем все блоки */
-
-.tabs__content.active 
-	display block /* по умолчанию показываем нужный блок */
+	+max(420px)
+	
+		&__caption
+			height 50px
+			line-height 4.6rem
+	
+		&__title
+			font-size 1.7rem
+			
+		&__category
+			margin-top 10px
+			
+			&:not(:last-child)
+				margin-right 5px
+			

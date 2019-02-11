@@ -530,15 +530,34 @@
 					<div class="pattern__title">Filter</div>
 				</div>
 
-				<div class="tabs">
-					<ul class="tabs__caption">
-						<li class="active">1-я вкладка</li>
-						<li>2-я вкладка</li>
-					</ul>
-					<div class="tabs__content active">
-					Содержимое первого блока</div>
-					<div class="tabs__content">
-					Содержимое второго блока</div>
+				<div class="filter">
+					<div class="filter__caption">
+						<div class="filter__item filter__item--active">
+							<svg class="filter__arrow"><use xlink:href="img/sprite.svg#arrow-1"></use></svg>
+							<div class="filter__title">По типу букета<span>:</span></div>
+						</div>
+						<div class="filter__item">
+							<svg class="filter__arrow filter__arrow--down"><use xlink:href="img/sprite.svg#arrow-1"></use></svg>
+							<div class="filter__title">К событию<span>:</span></div>
+						</div>
+					</div>
+					<div class="filter__wrap">
+						<div class="filter__content filter__content--active">
+							<ul class="filter__list">
+								<li class="filter__category filter__category--active">Авторские букеты</li>
+								<li class="filter__category">Цветочные коробки</li>
+								<li class="filter__category">Цветочные коробки</li>
+							</ul>
+						</div>
+						<div class="filter__content">
+							<ul class="filter__list">
+								<li class="filter__category">День всех влюбленных</li>
+								<li class="filter__category">8 марта</li>
+								<li class="filter__category">День рождения</li>
+								<li class="filter__category">Свидание</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 
 			</div>
