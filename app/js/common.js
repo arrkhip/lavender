@@ -56,6 +56,18 @@ var swiper = new Swiper('.reviews__slider', {
 	slidesPerView: 4,
 	spaceBetween: 30,
 	grabCursor: true,
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		600: {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+		}
+	}
 });
 
 
