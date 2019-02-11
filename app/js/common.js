@@ -68,6 +68,17 @@ var swiper = new Swiper('.customers__slider', {
 		el: '.swiper-scrollbar',
 		hide: false,
 	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 20,
+       pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+		}
+	}
 });
 
 
