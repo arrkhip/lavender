@@ -44,7 +44,7 @@
 		&-sale
 			margin-bottom 12px
 			font-size 2rem
-			font-stile italic
+			font-style italic
 			
 	&__list
 		padding-top 25px
@@ -108,7 +108,15 @@
 			max-width 40%
 			
 
-	+width-xs()
+	+max(600px)
+		padding 0
+		border none
+	
+		&__self
+			flex-direction column
+			
+			&-sale
+				margin-top 20px
 		
 		&__row 
 			flex-wrap wrap
