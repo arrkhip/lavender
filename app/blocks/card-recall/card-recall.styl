@@ -1,9 +1,32 @@
 .card-recall
+	position relative
 	width 100%	
 	max-width 270px
 	padding 26px 23px 23px
 	border 1px solid #d1d1d1
-
+	
+	&::before,
+	&::after
+		content ''
+		position absolute
+		
+	&::before
+		top -23px
+		left 29px
+		width 90px
+		height 95px
+		border 1px solid #d1d1d1
+		background-color transparent
+		transform skew(46deg, 20deg) rotate(38deg)
+		z-index -1
+		
+	&::after
+		top -1px
+		left 15px
+		width 51px
+		height 1px
+		background-color blue-light
+		
 	&__photo
 		width 120px
 		height 120px

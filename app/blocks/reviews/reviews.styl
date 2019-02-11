@@ -6,9 +6,27 @@
 		overflow hidden
 	
 	&__slider
+		padding-top 12px
 		padding-bottom 51px
 		border-bottom 1px solid #e8e8e8
 		
-		.swiper-slide-active
+		.card-recall
+			background-color blue-light
+		
+		.swiper-slide-active .card-recall
 			background-color white
+			border-color transparent
+			
+			&::before
+				border-color transparent
+				background-color white
+				
+			&::after 
+				display none
+				
+
+	+width-sm()
+	
+		&__slider
+			padding-top 35px
 		
