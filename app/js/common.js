@@ -123,8 +123,18 @@ if($("#map").length > 0) {
       [54.707686, 55.999780]        
       );
     myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('drag');
   }
 }
+
+
+// filter
+$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+	$(this)
+	.addClass('active').siblings().removeClass('active')
+	.closest('.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
 
 
 });
