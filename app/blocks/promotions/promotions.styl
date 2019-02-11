@@ -8,6 +8,19 @@
 		overflow hidden
 		padding-bottom 50px
 		
+	.pt-50
+		padding-top 50px
+		
 	+width-xs()
 		padding-top 12px
 		padding-bottom 35px
+		
+	+min(1200px)
+	
+		.swiper-slide
+			opacity .5
+			
+			&-prev,
+			&-next,
+			&-active
+				opacity 1

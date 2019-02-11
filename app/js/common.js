@@ -20,10 +20,20 @@ var swiper = new Swiper('.promotions__slider', {
 	slidesPerView: 'auto',
 	spaceBetween: 30,
 	grabCursor: true,
+	centeredSlides: true,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
 	},
+	breakpoints: {
+		1200: {
+			slidesPerView: 2
+		},
+		600: {
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+		}
+	}
 });
 
 
