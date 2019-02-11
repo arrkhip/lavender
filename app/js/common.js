@@ -36,6 +36,16 @@ var swiper = new Swiper('.popular__slider', {
 		el: '.swiper-scrollbar',
 		hide: false,
 	},
+	breakpoints: {
+		1200: {
+			slidesPerView: 2
+		},
+		600: {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			spaceBetween: 10,
+		}
+	}
 });
 
 

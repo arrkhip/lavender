@@ -2,8 +2,18 @@
 	padding-top 45px
 	padding-bottom 41px
 	
-	.grid
-		overflow hidden
-	
 	&__slider
 		position relative
+		padding-top 2px
+		padding-bottom 50px
+		overflow hidden
+		
+		
+	+max(600px)
+	
+		&__slider
+			overflow initial
+			
+		.swiper-slide:not(.swiper-slide-active)
+			opacity .5
+		
