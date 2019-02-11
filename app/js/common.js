@@ -25,6 +25,10 @@ var swiper = new Swiper('.promotions__slider', {
 		el: '.swiper-scrollbar',
 		hide: false,
 	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
 	breakpoints: {
 		1200: {
 			slidesPerView: 2
@@ -87,6 +91,10 @@ var swiper = new Swiper('.reviews__slider', {
 	slidesPerView: 4,
 	spaceBetween: 30,
 	grabCursor: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
 	breakpoints: {
 		992: {
 			slidesPerView: 3,
