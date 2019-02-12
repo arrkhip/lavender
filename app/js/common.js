@@ -167,6 +167,8 @@ $('.filter__caption').on('click', '.filter__item:not(.filter__item--active)', fu
 // filter active category
 $('.filter__category').click(function() {
 	$(this).toggleClass('filter__category--active');
+	$(this).parent().find('.filter__category').removeClass('filter__category--active');
+  $(this).addClass('filter__category--active');
 });
 
 
