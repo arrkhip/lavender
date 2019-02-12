@@ -50,6 +50,7 @@ var swiper = new Swiper('.promotions__slider', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
+		draggable: true,
 	},
 	pagination: {
 		el: '.swiper-pagination',
@@ -76,6 +77,7 @@ var swiper = new Swiper('.popular__slider', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
+		draggable: true,
 	},
 	breakpoints: {
 		1200: {
@@ -99,6 +101,7 @@ var swiper = new Swiper('.customers__slider', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
+		draggable: true,
 	},
 	pagination: {
 		el: '.swiper-pagination',
@@ -177,5 +180,9 @@ $('.catalog__more').click(function() {
 	$('.catalog__item:hidden:lt(3)').fadeIn();
 });
 
+
+$('[data-fancybox="promotions"]').fancybox({
+	// Options will go here
+});
 
 });
