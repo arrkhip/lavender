@@ -33,7 +33,7 @@ $(function() {
 
 	caption.click(function(e) {
 		content.not($(this).next(content)).slideUp(600);
-		$(this).next(content).slideToggle(600);
+		$(this).next(content).slideToggle(300);
 		icon.not($(this).find('.accordion__icon')).removeClass('accordion__icon--open');
 		$(this).find('.accordion__icon').toggleClass('accordion__icon--open');
 	});
