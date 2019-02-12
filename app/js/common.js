@@ -1,28 +1,27 @@
 $(document).ready(function () {
 
 // header
-
 $(document).on("scroll", onScroll);
 
-    $('a[href^="#"]').on('click', function (e) {
-    	e.preventDefault();
-    	$(document).off("scroll");
+$('a[href^="#"]').on('click', function (e) {
+	e.preventDefault();
+	$(document).off("scroll");
 
-    	$('a').each(function () {
-    		$(this).removeClass('header__nav-link--active');
-    	})
-    	$(this).addClass('header__nav-link--active');
+	$('a').each(function () {
+		$(this).removeClass('header__nav-link--active');
+	})
+	$(this).addClass('header__nav-link--active');
 
-    	var target = this.hash,
-    	menu = target;
-    	$target = $(target);
-    	$('html, body').stop().animate({
-    		'scrollTop': $target.offset().top - 170
-    	}, 500, 'swing', function () {
-    		window.location.hash = target + 170;
-    		$(document).on("scroll", onScroll);
-    	});
-    });
+	var target = this.hash,
+	menu = target;
+	$target = $(target);
+	$('html, body').stop().animate({
+		'scrollTop': $target.offset().top - 170
+	}, 500, 'swing', function () {
+		window.location.hash = target + 170;
+		$(document).on("scroll", onScroll);
+	});
+});
 
 function onScroll(event){
 	var scrollPos = $(document).scrollTop();
@@ -61,6 +60,7 @@ var swiper = new Swiper('.promotions__slider', {
 	spaceBetween: 30,
 	grabCursor: true,
 	centeredSlides: true,
+	loop: true,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
@@ -86,6 +86,7 @@ var swiper = new Swiper('.popular__slider', {
 	slidesPerView: 3,
 	spaceBetween: 0,
 	grabCursor: true,
+	loop: true,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
@@ -108,6 +109,7 @@ var swiper = new Swiper('.customers__slider', {
 	slidesPerView: 4,
 	spaceBetween: 30,
 	grabCursor: true,
+	loop: true,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
@@ -131,6 +133,7 @@ var swiper = new Swiper('.reviews__slider', {
 	slidesPerView: 4,
 	spaceBetween: 30,
 	grabCursor: true,
+	loop: true,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
@@ -152,19 +155,19 @@ var swiper = new Swiper('.reviews__slider', {
 
 // Yandex map
 if($("#map").length > 0) {
-  ymaps.ready(init);
-  function init () {
-    var myMap = new ymaps.Map('map', {
+	ymaps.ready(init);
+	function init () {
+		var myMap = new ymaps.Map('map', {
 
-      center: [54.707686, 55.999780], 
-      zoom: 16
-    });
-    var myPlacemark = new ymaps.Placemark(
-      [54.707686, 55.999780]        
-      );
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('drag');
-  }
+			center: [54.707686, 55.999780], 
+			zoom: 16
+		});
+		var myPlacemark = new ymaps.Placemark(
+			[54.707686, 55.999780]        
+			);
+		myMap.geoObjects.add(myPlacemark);
+		myMap.behaviors.disable('drag');
+	}
 }
 
 
@@ -177,7 +180,7 @@ $('.filter__caption').on('click', '.filter__item:not(.filter__item--active)', fu
 
 // filter active category
 $('.filter__category').click(function() {
-  $(this).toggleClass('filter__category--active');
+	$(this).toggleClass('filter__category--active');
 });
 
 
