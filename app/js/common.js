@@ -181,6 +181,10 @@ $('.catalog__more').click(function() {
 });
 
 
-$('[data-fancybox="popular"]', '[data-fancybox="catalog"]').fancybox();
+$('[data-fancybox="popular"]',
+ '[data-fancybox="catalog"]',
+ '[data-fancybox="customers"]').fancybox();
 
 });
+
+
