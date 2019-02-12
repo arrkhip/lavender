@@ -3,8 +3,6 @@
 	background-color white
 
 	&__item
-		padding-top 28px
-		padding-bottom 21px
 		
 		&:not(:last-child)
 			border-bottom 1px solid #e8e8e8
@@ -16,9 +14,12 @@
 		display flex
 		justify-content space-between
 		align-items flex-start
+		padding-top 28px
+		padding-bottom 20px
 		trs()
 
 		&:hover
+			cursor pointer
 			opacity .6
 
 	&__title
@@ -27,9 +28,6 @@
 		font-weight 600
 		line-height 2.2rem
 
-		&:hover
-			cursor pointer		
-
 	&__icon
 		width 23px
 		height 13px
@@ -37,16 +35,14 @@
 		transform rotate(-90deg)
 		trs()
 
-		&:hover
-			cursor pointer
-
 		&--open
 			transform rotate(90deg)
 
 	&__body
 		display none
-		padding-top 20px
 		padding-left 45px
+		padding-bottom 21px
+
 		
 		p 
 			line-height 2.2rem
