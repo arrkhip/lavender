@@ -181,7 +181,7 @@ $('.catalog__more').click(function() {
 });
 
 
-$('[data-fancybox="promotions"]').fancybox({
+$('[data-fancybox="popular"]').fancybox({
 	// Options will go here
 });
 
