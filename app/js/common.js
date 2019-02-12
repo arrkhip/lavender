@@ -181,10 +181,16 @@ $('.catalog__more').click(function() {
 });
 
 
+//photo gallery
 $('[data-fancybox="popular"]',
  '[data-fancybox="catalog"]',
  '[data-fancybox="customers"]').fancybox();
+});
 
+
+// phone mask 
+$('input[type=tel]').inputmask({
+  "mask": "+7 (999) 999-99-99"
 });
 
 
