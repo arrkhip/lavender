@@ -98,21 +98,20 @@
 
 		&-item
 		
-			a
-				font-size 15px
-				color white
-				trs(color)
+		&-link
+			font-size 15px
+			color white
+			trs()
+			
+			&:hover
+				opacity .6
 				
 			&--active
-				a 
-					color violet-light
+				color violet-light
 			
-			&:not(.header__nav-item--active) a 
-				trs()
-				
 				&:hover
-					opacity .6
-					
+					opacity 1
+				
 
 	+width-lg()
 	
