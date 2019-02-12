@@ -170,4 +170,10 @@ $('.filter__category').click(function() {
 });
 
 
+//catalog show more
+$('.catalog__more').click(function() {
+	$('.catalog__item:hidden:lt(3)').fadeIn();
+});
+
+
 });
